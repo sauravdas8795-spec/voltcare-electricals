@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Voltcare Electricals - Safe, reliable and professional electrical services in Dimapur, Assam and Tripura.">
+<title>Voltcare Electricals | Professional Electrical Service</title>
+<style>
+:root{
+  --bg:#070707; --panel:#111111; --gold:#f5b91b; --gold2:#ffd65a;
+  --text:#f7f7f7; --muted:#b9b9b9; --line:#2b2b2b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.8px}
+.logo-mark{font-size:32px;color:var(--gold)}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:26px;color:#ddd;font-size:14px}
+nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:0;color:white;font-size:26px}
+.hero{min-height:680px;display:flex;align-items:center;background:
+radial-gradient(circle at 75% 35%,rgba(245,185,27,.17),transparent 28%),
+linear-gradient(135deg,#070707 0%,#101010 55%,#17120a 100%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:85px 0}
+.badge{display:inline-block;border:1px solid #6c5318;color:var(--gold2);padding:7px 13px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1.4px;margin-bottom:20px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-2px}
+h1 span{color:var(--gold)}
+.hero p{color:var(--muted);font-size:18px;max-width:610px;margin:22px 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 20px;border-radius:8px;font-weight:800;display:inline-block}
+.btn-gold{background:var(--gold);color:#080808}
+.btn-dark{border:1px solid #555;background:#121212}
+.btn:hover{transform:translateY(-2px)}
+.hero-card{min-height:430px;border:1px solid #40351b;border-radius:24px;background:
+linear-gradient(145deg,rgba(245,185,27,.14),rgba(255,255,255,.02)),
+#101010;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-card:before{content:"⚡";font-size:260px;color:rgba(245,185,27,.08);position:absolute;transform:rotate(-10deg)}
+.card-content{position:relative;text-align:center;padding:30px}
+.card-content .big{font-size:80px;color:var(--gold)}
+.card-content h2{font-size:28px}
+.card-content p{font-size:14px;margin:8px auto 0}
+section{padding:85px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+.kicker{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:38px;line-height:1.15;margin:9px 0 12px}
+.section-head p,.muted{color:var(--muted)}
+.services{background:#0c0c0c}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.icon{font-size:30px;color:var(--gold);margin-bottom:10px}
+.service h3{font-size:19px;margin-bottom:7px}
+.service p{color:var(--muted);font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.points{display:grid;gap:14px;margin-top:24px}
+.point{display:flex;gap:13px;padding:15px;border:1px solid var(--line);border-radius:12px;background:#0d0d0d}
+.point b{color:var(--gold)}
+.area{border:1px solid #40351b;background:linear-gradient(145deg,#15120b,#0d0d0d);border-radius:20px;padding:38px}
+.area-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.area-list span{border:1px solid #574617;padding:9px 14px;border-radius:30px;color:#eee}
+.contact{background:#0c0c0c}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-box{padding:30px;border:1px solid var(--line);border-radius:18px;background:#111}
+.contact-item{padding:15px 0;border-bottom:1px solid var(--line)}
+.contact-item:last-child{border-bottom:0}
+.contact-item small{display:block;color:#888;margin-bottom:3px}
+.contact-item a{color:var(--gold2);font-weight:700}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#888;font-size:13px}
+footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){
+ nav{display:none;position:absolute;top:74px;left:0;right:0;background:#0b0b0b;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}.menu{display:block}
+ .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .hero{min-height:auto}.hero-grid{padding:65px 0}
+ .grid{grid-template-columns:1fr 1fr}
+ .hero-card{min-height:300px}
+}
+@media(max-width:540px){
+ .grid{grid-template-columns:1fr}
+ h2{font-size:31px}.hero p{font-size:16px}
+ .btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home"><div class="logo-mark">⚡</div><div>VOLTCARE <span>ELECTRICALS</span></div></a>
+    <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">☰</button>
+    <nav>
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">Why Us</a>
+      <a href="#areas">Areas</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">SAFE • RELIABLE • PROFESSIONAL</div>
+      <h1>Powering Your Life <span>Safely.</span></h1>
+      <p>Professional electrical services for homes, shops, offices and projects. From small repairs to complete wiring and electrical installations.</p>
+      <div class="btns">
+        <a class="btn btn-gold" href="tel:+917005821163">📞 Call Now</a>
+        <a class="btn btn-dark" href="https://wa.me/917005821163?text=Hello%20Voltcare%20Electricals,%20I%20need%20an%20electrical%20service." target="_blank">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-content">
+        <div class="big">⚡</div>
+        <h2>Voltcare Electricals</h2>
+        <p>Your Electrical Needs • Our Priority</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">What We Do</div>
+      <h2>Professional Electrical Services</h2>
+      <p>Reliable workmanship with a focus on safety, quality and timely service.</p>
+    </div>
+    <div class="grid">
+      <div class="service"><div class="icon">🏠</div><h3>House Wiring</h3><p>New wiring, rewiring and renovation electrical work.</p></div>
+      <div class="service"><div class="icon">💡</div><h3>Light & LED</h3><p>Indoor, outdoor, decorative and replacement lighting.</p></div>
+      <div class="service"><div class="icon">🌀</div><h3>Fan Installation</h3><p>Ceiling fan installation, replacement and repair.</p></div>
+      <div class="service"><div class="icon">🔌</div><h3>Switch & Socket</h3><p>Installation, replacement and electrical point work.</p></div>
+      <div class="service"><div class="icon">⚡</div><h3>MCB / DB Work</h3><p>Installation, repair and electrical distribution work.</p></div>
+      <div class="service"><div class="icon">🔋</div><h3>Inverter Service</h3><p>Home and office inverter installation and service.</p></div>
+      <div class="service"><div class="icon">🛠️</div><h3>Fault Finding</h3><p>Electrical fault diagnosis and repair.</p></div>
+      <div class="service"><div class="icon">📹</div><h3>CCTV Installation</h3><p>Camera installation and basic security setup.</p></div>
+      <div class="service"><div class="icon">🏢</div><h3>Commercial Work</h3><p>Electrical support for shops, offices and small projects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="kicker">Why Voltcare</div>
+      <h2>Electrical work you can depend on.</h2>
+      <p class="muted">We aim to make electrical service simple: clear communication, safe work and practical solutions.</p>
+      <div class="points">
+        <div class="point"><div>✓</div><div><b>Safety First</b><br><span class="muted">Careful and responsible electrical work.</span></div></div>
+        <div class="point"><div>✓</div><div><b>Professional Service</b><br><span class="muted">Clean, organised and customer-focused work.</span></div></div>
+        <div class="point"><div>✓</div><div><b>Affordable Pricing</b><br><span class="muted">Discuss the job before starting.</span></div></div>
+      </div>
+    </div>
+    <div class="area" id="areas">
+      <div class="kicker">Service Areas</div>
+      <h2>Where We Work</h2>
+      <p class="muted">Currently serving customers in and around:</p>
+      <div class="area-list">
+        <span>Dimapur, Nagaland</span><span>Assam</span><span>Tripura</span><span>Nearby Areas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Get In Touch</div>
+      <h2>Need an Electrician?</h2>
+      <p>Call or WhatsApp Voltcare Electricals for your electrical service enquiry.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-box">
+        <div class="contact-item"><small>CALL / WHATSAPP</small><a href="tel:+917005821163">7005821163</a><br><a href="tel:+916009300774">6009300774</a></div>
+        <div class="contact-item"><small>EMAIL</small><a href="mailto:sauravdas8795@gmail.com">sauravdas8795@gmail.com</a></div>
+        <div class="contact-item"><small>BUSINESS</small><strong>Voltcare Electricals</strong></div>
+      </div>
+      <div class="contact-box">
+        <h3>Quick Booking</h3>
+        <p class="muted" style="margin:10px 0 20px">Tell us what electrical work you need and we'll get back to you.</p>
+        <a class="btn btn-gold" style="width:100%;text-align:center" href="https://wa.me/917005821163?text=Hello%20Voltcare%20Electricals,%20I%20want%20to%20book%20an%20electrical%20service.%0AService%20needed:%0ALocation:" target="_blank">💬 Book via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <div>© <span id="year"></span> Voltcare Electricals. All rights reserved.</div>
+    <div>Safe • Reliable • Professional</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
